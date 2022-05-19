@@ -3,7 +3,6 @@ provider "aws" {
     access_key = "xxIARLEA2aDAOIKBxxxx"        
     secret_key =  "xxxxxxxvzeX4kEqB6hNGMXBVB8IKqTsH7+xxxx"     
 }
-#1. Create vpc    创建vpc
 resource "aws_vpc" "prod-vpc" {
   cidr_block       = "10.0.0.0/16"   
   instance_tenancy = "default"
