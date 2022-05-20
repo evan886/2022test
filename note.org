@@ -19,8 +19,8 @@
  https://github.com/evan886/2022test/tree/main/ansible/roles/insdocker
 
 * Deploy/Start an Nginx container on that VM instance.
-Demonstrate how you would test the healthiness of the Nginx container.
-Expose the Nginx container to the public web on port 80.
+  Demonstrate how you would test the healthiness of the Nginx container.
+  Expose the Nginx container to the public web on port 80.
 
 
   也是利用 ansible-playbook
@@ -29,16 +29,18 @@ Expose the Nginx container to the public web on port 80.
  https://github.com/evan886/2022test/tree/main/ansible/roles/insng
 
 *  Fetch the output of the Nginx container’s default welcome page.
+  Excluding any HTML/JS/CSS tags and symbols, output the words and their frequency count for the words that occurred the most times on the default welcome page.
+ 脚本 请见 
+ https://github.com/evan886/2022test/blob/main/py3count.py
 
-
-
+ ansible ec2  -m script -a ' ./py3count.py'
 
 * Demonstrate how you would log the resource usage of the containers every 10 seconds.
 
+ cat  10.sh 
  watch -n 10 "sudo  docker stats nginx1.15  --no-stream "
 
-或者用ansible 跑
-
+ ansible ec2  -m script -a ' ./10.sh'
 
 #!/bin/bash
 while [ true ]
