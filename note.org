@@ -27,3 +27,22 @@ Expose the Nginx container to the public web on port 80.
 
 *  Fetch the output of the Nginx container’s default welcome page.
 
+
+
+
+* Demonstrate how you would log the resource usage of the containers every 10 seconds.
+
+ watch -n 10 "sudo  docker stats nginx1.15  --no-stream "
+
+或者用ansible 跑
+
+
+#!/bin/bash
+while [ true ]
+do
+/bin/sleep 10
+date >>dockerngstats
+sudo  docker stats nginx1.15  --no-stream >>dockerngstats
+done
+
+#或者放在 crontab 
