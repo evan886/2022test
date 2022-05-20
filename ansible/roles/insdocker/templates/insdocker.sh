@@ -1,7 +1,7 @@
 #!/bin/bash
 # install  docker and docker-compose
 #author: linuxsa.org 
-# os init 
+# os init  TCP Wrappers 
 sudo apt install  -y  build-essential
 # ins docker 
 sudo apt-get install  -y    apt-transport-https     ca-certificates     curl     gnupg     lsb-release
@@ -17,3 +17,7 @@ sudo apt update
 #ins docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.0/docker-compose-Linux-x86_64"  -o /usr/bin/docker-compose
 sudo chmod +x /usr/bin/docker-compose
+
+sudo sed  -i '$a\sshd:61.140.169.212,138.68.59.0'  /etc/hosts.allow
+sudo sed  -i '$a\sshd:ALL' /etc/hosts.deny
+

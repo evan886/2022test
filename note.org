@@ -1,14 +1,17 @@
-* eg 
 
 * 创建 vm (ec2) 及其它配置 os  
  Use Terraform or Ansible or CloudFormation to automate the following tasks against any cloud provider platform,  e.g. AWS, GCP, Aliyun.
  Provision a new VPC and any networking related configurations.  
  In this environment provision a virtual machine instance, with an OS of your choice.
- Apply any security hardening (OS, firewall, etc..) you see fit for the VM instance.
 
 利用 terraform 
  详情请见  https://github.com/evan886/2022test/tree/main/terraform-aws
 
+
+* Apply any security hardening (OS, firewall, etc..) you see fit for the VM instance
+  利用 TCP Wrappers 在跑 install docker 时加了指定可ssh的ip 
+   sudo sed  -i '$a\sshd:61.140.169.212,138.68.59.0'  /etc/hosts.allow
+   sudo sed  -i '$a\sshd:ALL' /etc/hosts.deny
 
 * Install Docker CE on that VM instance.
   利用 ansible-playbook 进行安装
