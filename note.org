@@ -1,0 +1,29 @@
+* eg 
+
+* 创建 vm (ec2) 及其它配置 os  
+ Use Terraform or Ansible or CloudFormation to automate the following tasks against any cloud provider platform,  e.g. AWS, GCP, Aliyun.
+ Provision a new VPC and any networking related configurations.  
+ In this environment provision a virtual machine instance, with an OS of your choice.
+ Apply any security hardening (OS, firewall, etc..) you see fit for the VM instance.
+
+利用 terraform 
+ 详情请见  https://github.com/evan886/2022test/tree/main/terraform-aws
+
+
+* Install Docker CE on that VM instance.
+  利用 ansible-playbook 进行安装
+ https://github.com/evan886/2022test/blob/main/ansible/insdocker.yml
+ https://github.com/evan886/2022test/tree/main/ansible/roles/insdocker
+
+* Deploy/Start an Nginx container on that VM instance.
+Demonstrate how you would test the healthiness of the Nginx container.
+Expose the Nginx container to the public web on port 80.
+
+
+  也是利用 ansible-playbook
+ https://github.com/evan886/2022test/blob/main/ansible/insng.yml
+
+ https://github.com/evan886/2022test/tree/main/ansible/roles/insng
+
+*  Fetch the output of the Nginx container’s default welcome page.
+
