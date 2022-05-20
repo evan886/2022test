@@ -110,6 +110,7 @@ resource "aws_instance" "web-server-instance" {
     user_data = <<-EOF
                    #!/bin/bash
                    sudo apt update -y
+                   sudo apt  -y  vim 
                    EOF
     tags  =  {
         Name = "web-server"

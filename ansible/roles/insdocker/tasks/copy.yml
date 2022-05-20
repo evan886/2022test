@@ -1,0 +1,3 @@
+- name: copy install_script to client
+  copy: src=/etc/ansible/roles/insdocker/templates/insdocker.sh dest=/tmp/insdocker.sh owner=evan group=evan mode=755
+

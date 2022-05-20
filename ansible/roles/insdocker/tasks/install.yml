@@ -1,0 +1,2 @@
+- name: install docker etc  
+  shell: sudo /bin/bash /tmp/insdocker.sh
