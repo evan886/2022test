@@ -1,0 +1,7 @@
+---
+- hosts: ec2
+  become: yes
+  become_method: sudo
+  remote_user: evan
+  roles:
+    - insng

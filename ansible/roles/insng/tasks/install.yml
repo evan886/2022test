@@ -1,0 +1,2 @@
+- name: install  ng 
+  shell: sudo /bin/bash /tmp/insng.sh

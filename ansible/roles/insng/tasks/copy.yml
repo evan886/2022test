@@ -1,0 +1,5 @@
+- name: copy configfile  to client
+  copy: src=/etc/ansible/roles/insng/files/docker-compose.yml  dest=/tmp/docker-compose.yml  owner=evan group=evan mode=755
+
+- name: copy install_script to client
+  copy: src=/etc/ansible/roles/insng/templates/insng.sh dest=/tmp/insng.sh owner=evan group=evan mode=755
