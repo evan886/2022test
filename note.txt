@@ -32,6 +32,7 @@
   Demonstrate how you would test the healthiness of the Nginx container.
 
     ansible ec2  -m script -a ' ./checkng.py'
+    https://github.com/evan886/2022test/blob/main/checkng.py
   
 #!/usr/bin/python3
 # this on  
