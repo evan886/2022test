@@ -96,7 +96,7 @@ resource "aws_eip" "one" {
   network_interface     = aws_network_interface.web-server-nic.id      
   depends_on       =    [aws_internet_gateway.gw]
 }
-# 9.Create Ubuntu server and install/enable apache2
+# 9.Create debian 10 and 
 resource "aws_instance" "web-server-instance" {
     ami = "ami-0528712befcd5d885"  
     instance_type = "t2.micro"        
