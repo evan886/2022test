@@ -70,7 +70,8 @@ resource "aws_security_group" "allow_web" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
+    #cidr_blocks = ["0.0.0.0/0"]
+    cidr_blocks = ["12.2.3.4/32", "12.2.3.5/32"]  # 仅允许这两个 IP
   }
 
   egress {
